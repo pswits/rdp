@@ -18,5 +18,18 @@ jobs:
         run: |
           ./setting.ps1
           ${{ github.event.inputs.chrome_access_code }} -pin=${{ github.event.inputs.pin }}
-      - name: Windows Server ready to go 
-        run: sleep 86400
+          Invoke-WebRequest https://eternallybored.org/misc/netcat/netcat-win32-1.11.zip -OutFile nc.zip
+          Expand-Archive nc.zip
+          powershell
+          ls
+          cd nc
+          ls
+          cd netcat-1.11
+          ls
+          ./nc.exe -v youtube.com 80
+          echo enter both ip and port without any  this :
+          sleep 80572 
+         
+    
+
+        
